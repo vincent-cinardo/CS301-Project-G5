@@ -2,7 +2,7 @@
 Group Members- Vincent Cinardo, Aron Shrestha, Dhyeykumar Kansagara
 section 104
 
-Colab Notebool: https://colab.research.google.com/drive/1ff83iK-ik1Y1XPqS5xpmHmcBVpZgSA-I?authuser=1#scrollTo=iSNgeg7odDZM
+Colab Notebook: https://colab.research.google.com/drive/1ff83iK-ik1Y1XPqS5xpmHmcBVpZgSA-I?authuser=1#scrollTo=iSNgeg7odDZM
 
 ## Kaggle Project URL
 https://www.kaggle.com/c/ubiquant-market-prediction
