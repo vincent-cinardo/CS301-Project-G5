@@ -23,6 +23,8 @@ Our paper is very much similar to the first paper discussed in this section. Our
 The data that we will be using in our experimentation is from a stock called
 Alliancebernstein Holding LP.
 
+![data](/img/1.png)
+![data2](/img/2.png)
 
 For the simple linear regression, we used the date as our input x and the adjusted close for our predictions. For the multiple linear regression, we used the open, close, and volume for inputs x1, x2, and x3 respectively.  As far as preprocessing goes, the data was downloaded directly from a kaggle dataset as a directory filled with csv files. From there it was converted into a pandas dataframe which made it easily accessible in Python from there.
 
@@ -64,16 +66,22 @@ We chose to use multiple linear regression and batch gradient descent for a few 
 ## Experiments
 We divided our experiments into three parts to solve the problem of predicting the market. For the first part, we used a general mathematical formula to get a best fit line over the data set. We experimented with the principles of simple linear regression that are discussed above in the methods section. The result of this experiment was a straight linear plot over the data set shown in the figure below. 
 
+![experiment](/img/3.png)
+
 The result of this experimental part was not enough for the prediction to be considered accurate. A continuously ascending linear relationship too simplistic to be considered accurate. Our testing dataset error came out to be 28170.29 units. This is a very huge error.  We then went ahead and used concepts like gradient descent and multiple linear regression which made up our other parts of the project to get a better prediction model. 
  
 Our second part includes experimentation and working with Jax. Jax is a python library designed for high performance machine learning research. In this part we use jax to find a fit for the prices of our stock. We switched our stock to Tesla from Alliancebernstein Holding LP. We kept focusing on the linear regression model but we included a gradient descent method to find a line of fit for this part of the project. We found out that it was way easier to find the best fit line for the chosen stock using Jax than using normal mathematical functions. Furthermore, we were able to reduce our average loss for the test dataset to 5112.26 units.
+
+![experiment2](/img/4.png)
 
 We saw that our results were still not accurate since we were still getting a linear straight fit and that was not enough. To better our model, we implemented a multiple linear regression method.
  
 For the third part, we implemented a multiple linear regression model. The first step of multiple regression is to hypothesize. In our data, we hypothesized that the prediction could be modeled as a function of the open, high, low, and volume values. β1, β2, β3, and β4 are their respective parameters of unknown value.  β0 is the constant in the equation that we also have to find. So our new hypothesis is y = β0 + β1x1 + β2x2 + β3x3 + β4x4 + ε
 Here we retrieve our xᵢ and y values.
  
-We changed a couple of things for this part. We experimented with the parameters and features. That is, for part two, we had parameters initiated from 0 but in part three, we initialized the parameter with a random number and then performed a gradient descent on it. We also switched to batch gradient descent. The reason behind it was that initially we were just  experimenting with one stock, However in the real world, our company would be dealing with predictions of multiple stocks and thus batch gradient descent was the way to do it. We also experimented with the number of features for the third part. Since we were now using multiple regression, we played around by incrementing features and seeing how many features gave a better fit. We started with one feature and went upto five features. Eventually, we found out that a set of four features namely ‘open’, ‘volume’, ‘high’ and ‘low’ resulted in the best fit. After all the changes, we were able to get a plot that mostly traces the actual prices, shown the figure below
+We changed a couple of things for this part. We experimented with the parameters and features. That is, for part two, we had parameters initiated from 0 but in part three, we initialized the parameter with a random number and then performed a gradient descent on it. We also switched to batch gradient descent. The reason behind it was that initially we were just  experimenting with one stock, However in the real world, our company would be dealing with predictions of multiple stocks and thus batch gradient descent was the way to do it. We also experimented with the number of features for the third part. Since we were now using multiple regression, we played around by incrementing features and seeing how many features gave a better fit. We started with one feature and went upto five features. Eventually, we found out that a set of four features namely ‘open’, ‘volume’, ‘high’ and ‘low’ resulted in the best fit. After all the changes, we were able to get a plot that mostly traces the actual prices, shown the figure below-
+
+![experiment3](/img/5.png)
 
  we distributed our 90% data for training and 10% data for testing. In all the three parts mentioned above, we calculated the mean square error for the 10% testing data. Our mean squared error decreased remarkably across all the three parts. For the third part, our model was accurate enough to achieve a mean squared error of just 2660.98 units, which is significantly less than what we received for our previous two experimental parts.
  
