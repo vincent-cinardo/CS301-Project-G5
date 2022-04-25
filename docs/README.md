@@ -6,25 +6,25 @@ CS 301 - 104 Introduction to Data Science
 April 4, 2022
 Ubiquant Market Prediction
 
-Abstract
+##Abstract
 We nwill implement an algorithm with multiple regression and batch gradient descent to find the equation of any particular stock market of our choosing. The general idea is that we hypothesize the existence of some equation for the model based on its features (categories of data). Multiple regression and gradient descent will allow us to find how much weight each feature holds by incrementing or decrementing them according to the gradient. Our results include a working linear regression model that predicts the future stock price. With the use of gradient descent as our loss function, we were able to optimize our training model and get a more accurate prediction plot.
  
-Introduction
+##Introduction
 A lucrative method of earning income is to invest into the stock market; exploiting trends using one's own knowledge of current events or patterns. Successful investing is not particularly easy. Even the most experienced investors will often lose money from an investment, usually buying  and losing in manageable amounts in relation to their buying power. It is a general rule of thumb to net positive income over 50% of the time. In the modern era, ‘statistical trading’ has become a common practice in the world of stock brokerage. Traders are able to gather more data than ever and use it to their advantage. With that in mind, our team has decided on a data science approach to the issue of predicting stock market trends. It is important because if a successful model is produced, an investor can increase their success rate, minimizing their losses and maximizing their gains. With that said, the name of our company is Market Genie. We provide predictive analysis solutions for investors. Here we implement a tool to predict a market of the user’s choosing. Our customer can choose features as inputs that they suspect will affect the market in ways that can be modeled. The program then takes the historical data of that stock and produces an equation for the user to use in the future. We believe that our implementation is fairly consistent in its predictions.
 
-Related Work
+##Related Work
 	In the scientific journal, “Stock Price Trend Prediction Using Multiple Linear Regression '', multiple linear regression is used to model the trends of APPLE INC.’s stock and used root mean squared error to gauge its performance. The uncertainty of the returns could be mitigated by accurately predicting the stock prices and this could be done by identifying their fluctuations in advance. A prediction model that takes multiple factors is needed to do so (Shakhla et al. 2018). Their model calculated a linear relation between the dependent variable and every other independent variable. Furthermore, they removed the complexity by squaring the deviations. 
 	Another paper shares the methods to reduce the risk prediction with machine learning and deep learning algorithms. It it, authors compared nine machine learning models and two deep learning methods. Nabipour and others used ten technical indicators as their input values. They used two ways to employ them, firstly calculating the indicators by stock trading values and secondly by converting indicators to binary data before using it. After the prediction of each model, they found out that continuous data, RNN and LSTM outperforms other prediction models.
 	Our paper is very much similar to the first paper discussed in this section. Our paper is divided into three parts. In the first part we used a couple of mathematical formulas to come up with a best fit line for the plot of our data. Additionally, we used mean square error as our loss function. In the second part, we used jax to implement gradient descent and get the best fit line for the plot of our data. Eventually in the third part, we tried to get more accurate results with the use of a multiple-linear regression model. All the three parts were divided into training and testing criteria and loss functions were used in all the testing criterias. 
 
-Data 
+##Data 
 The data that we will be using in our experimentation is from a stock called
 Alliancebernstein Holding LP.
 
 
 For the simple linear regression, we used the date as our input x and the adjusted close for our predictions. For the multiple linear regression, we used the open, close, and volume for inputs x1, x2, and x3 respectively.  As far as preprocessing goes, the data was downloaded directly from a kaggle dataset as a directory filled with csv files. From there it was converted into a pandas dataframe which made it easily accessible in Python from there.
 
-Methods
+##Methods
 It is important to understand the statistics and calculus behind our implementation.
 Simple linear regression describes how an independent variable affects a dependent variable linearly. The equation itself is linear and follows the form: y = mx + b. For comparison, the equation of simple linear regression is y = α + Βx. The slope β and constant α minimize the error within the relationship between x and y. What is meant by error?
  
@@ -59,7 +59,7 @@ Considering the statistics and calculus that goes into multiple linear regressio
  
 We chose to use multiple linear regression and batch gradient descent for a few reasons. Multiple linear regression was enticing due to the ability to hypothesize parameters. If we believe a  feature can affect the input, we can change the inputs quite easily and better understand their influence. Batch gradient descent was necessary since it can accommodate for an error that is too large, given a huge amount of data. If we wanted to use more data, we could easily scale the number of batches. Alternative approaches we considered were deep learning and decision trees. Deep learning was a close option because we understand that it is powerful. But, the cost of such a method would have likely exhausted our data usage in colab. Decision trees were a thought. However, large variances in values could influence the model too greatly. We considered our current combination to be the safest.
  
-Experiments
+##Experiments
 We divided our experiments into three parts to solve the problem of predicting the market. For the first part, we used a general mathematical formula to get a best fit line over the data set. We experimented with the principles of simple linear regression that are discussed above in the methods section. The result of this experiment was a straight linear plot over the data set shown in the figure below. 
 
 The result of this experimental part was not enough for the prediction to be considered accurate. A continuously ascending linear relationship too simplistic to be considered accurate. Our testing dataset error came out to be 28170.29 units. This is a very huge error.  We then went ahead and used concepts like gradient descent and multiple linear regression which made up our other parts of the project to get a better prediction model. 
@@ -76,13 +76,13 @@ We changed a couple of things for this part. We experimented with the parameters
  we distributed our 90% data for training and 10% data for testing. In all the three parts mentioned above, we calculated the mean square error for the 10% testing data. Our mean squared error decreased remarkably across all the three parts. For the third part, our model was accurate enough to achieve a mean squared error of just 2660.98 units, which is significantly less than what we received for our previous two experimental parts.
  
 
-Conclusion
+##Conclusion
 	Our key results were that we were able to create a linear regression model that predicts the future stock prices. We were able to get a plot that almost accurately traces the observed future prices of our used stock. We were able to learn multiple concepts related to machine learning and how to work with data sets. We deepened our knowledge of linear regression, gradient descent, and acquired a better understanding of multiple regression. We learnt how to work with frameworks such as numpy, pandas and most notably jax. 
 	We would optimize our hyperparameters such as learning rates, epochs and batch sizes to further improve our current model. There are a few limitations of multiple regression models and different kinds of models could be used to overcome these limitations. For example, we found out that we could have used deep neural networks (Long Short Term Memory) in this kind of regression problem to get a higher accuracy after further researching on our topic. 
 	Therefore, this type of deep neural network could be used for future extensions and new application of our ideas. Cryptocurrency market is a new trending market that is highly volatile and there is a huge risk involved. So, the extensions of our current model could be applied to evaluate risk and predict the market for a crypto coin. 
 
 
-Works Cited
+##Works Cited
 Grus, J. (2019). Data Science from scratch: First principles with python. O'Reilly Media.
 Shakhla, S., Shah, B., Shah, N., Unadkat, V., & Kanami, P. (2018, October 17). Stock price trend prediction using multiple linear ... - IJESI. Stock Price Trend Prediction Using Multiple Linear Regression. Retrieved April 23, 2022, from http://ijesi.org/papers/Vol(7)i10/Version-2/D0710022933.pdf 
 Nabipour, M., Nayyeri, P., Jabani, H., S, S., & Mosavi, A. (2020, August 12). Predicting stock market trends using machine learning and deep learning algorithms via continuous and binary data; a comparative analysis. IEEE Xplore. Retrieved April 23, 2022, from https://ieeexplore.ieee.org/document/9165760 
