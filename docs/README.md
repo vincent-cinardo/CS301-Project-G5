@@ -87,7 +87,7 @@ Therefore, this type of deep neural network could be used for future extensions 
 
 
 ## Works Cited
-Grus, J. (2019). Data Science from scratch: First principles with python. O'Reilly Media.
-Shakhla, S., Shah, B., Shah, N., Unadkat, V., & Kanami, P. (2018, October 17). Stock price trend prediction using multiple linear ... - IJESI. Stock Price Trend Prediction Using Multiple Linear Regression. Retrieved April 23, 2022, from http://ijesi.org/papers/Vol(7)i10/Version-2/D0710022933.pdf 
-Nabipour, M., Nayyeri, P., Jabani, H., S, S., & Mosavi, A. (2020, August 12). Predicting stock market trends using machine learning and deep learning algorithms via continuous and binary data; a comparative analysis. IEEE Xplore. Retrieved April 23, 2022, from https://ieeexplore.ieee.org/document/9165760 
+1. Grus, J. (2019). Data Science from scratch: First principles with python. O'Reilly Media.
+2. Shakhla, S., Shah, B., Shah, N., Unadkat, V., & Kanami, P. (2018, October 17). Stock price trend prediction using multiple linear ... - IJESI. Stock Price Trend Prediction Using Multiple Linear Regression. Retrieved April 23, 2022, from http://ijesi.org/papers/Vol(7)i10/Version-2/D0710022933.pdf 
+3. Nabipour, M., Nayyeri, P., Jabani, H., S, S., & Mosavi, A. (2020, August 12). Predicting stock market trends using machine learning and deep learning algorithms via continuous and binary data; a comparative analysis. IEEE Xplore. Retrieved April 23, 2022, from https://ieeexplore.ieee.org/document/9165760 
 
