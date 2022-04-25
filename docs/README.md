@@ -48,8 +48,8 @@ Now that beta is found, the intercept can be calculated. Remember to find the in
 There is a reason the means of x and y are used. Outputs y on average are closer to the mean; a phenomenon known as "regression towards the mean". With each new measurement, there is a tendency to return to the mean. For example, say we measure the performance of baseball players. They might have a great or horrible performance away from the average (extreme value). But with more games, there is a tendency for their performance to return towards the mean.
  
 The first step of multiple regression is to hypothesize. In our data, we hypothesized that the prediction could be modeled as a function of the open, close, and volume values. 
-β1, β2, and β3, are their respective parameters of unknown value. β0
- is the constant in the equation that we also have to find. So our new hypothesis is y = β0 + β1x1+β2x2+ β3x3+ ε
+β<sub>1</sub>, β<sub>2</sub>, and β<sub>3</sub>, are their respective parameters of unknown value. β<sub>0</sub>
+ is the constant in the equation that we also have to find. So our new hypothesis is y = β<sub>0</sub> + β<sub>1</sub>x<sub>1</sub>+β<sub>2</sub>x<sub>2</sub>+ β<sub>3</sub>x<sub>3</sub>+ ε
 
 At this point we need to redefine several functions to handle more than one input vector. We need to be able to utilize a scalable number n of inputs, so inputs up to xn. In our case, n = 3. The functionality of our least squares fit function must change since there are now multiple inputs. Gradient descent will now be used.
  
